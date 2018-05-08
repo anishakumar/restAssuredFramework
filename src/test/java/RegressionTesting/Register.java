@@ -28,13 +28,13 @@ public class Register {
                 contentType("application/json").
                 body(" {\n" +
                         "  \n" +
-                        "  \"description\": \"Anish\",\n" +
-                        "  \"name\": \"Automation{{$timestamp}}\",\n" +
+                        "  \"description\": \"long\",\n" +
+                        "  \"name\": \"Automation"+randomId+"\",\n" +
                         "   \"partnerProfile\": {\n" +
                         "    \"email\": \"anish.kumar@plantronics.com\",\n" +
                         "    \"firstName\": \"Anish\",\n" +
                         "    \"lastName\": \"Kumar\",\n" +
-                        "    \"partnerName\": \"Automation001\"\n" +
+                        "    \"partnerName\": \"Automation"+randomId+"\"\n" +
                         "  }\n" +
                         "\n" +
                         "}").
@@ -44,7 +44,7 @@ public class Register {
         String body = resp.getBody().asString();
         System.out.println(body);
 
-        System.out.println(appID + "I AM NUNBER 1");
+        System.out.println(appID + " I AM NUNBER 1");
 
 
     }
