@@ -49,7 +49,7 @@ public class Register {
 
     }
 
-    //@Test
+    @Test
     public void T2_appAuthorization() {
         System.out.println(appID);
 
