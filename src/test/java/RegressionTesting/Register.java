@@ -15,15 +15,14 @@ import static org.hamcrest.Matchers.*;
 public class Register {
 
     private static String appID;
+    private static long randomId;
 
 
     @Test
 
     public void T1_appRegister() {
         String path = "https://partner-api.dev.pltzone.org/v1/app";
-        long randomId = System.currentTimeMillis();
-        //String uniqueID = UUID.randomUUID().toString();
-        System.out.println(randomId);
+        randomId = System.currentTimeMillis();
         Response resp = given().
                 contentType("application/json").
                 body(" {\n" +
@@ -44,7 +43,6 @@ public class Register {
         String body = resp.getBody().asString();
         System.out.println(body);
 
-        System.out.println(appID + " I AM NUNBER 1");
 
 
     }
@@ -58,6 +56,12 @@ public class Register {
                 contentType("application/json").
                 put(path);
         resp.print();
+
+        String appName = resp.jsonPath().get("name");
+        //System.out.println(appName);
+        Assert.assertEquals(appName,"Automation"+randomId);
+
+
 
 
     }
