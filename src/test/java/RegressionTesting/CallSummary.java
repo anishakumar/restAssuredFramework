@@ -18,7 +18,7 @@ public class CallSummary {
     public void T1_CheckTenantId(){
 
         Response resp = given().
-                header("appID", "abcd").
+                header("appID", "35f8dffb-650b-42c5-af27-76be5bc2053d").
         when().
                 get(path);
 
@@ -35,7 +35,7 @@ public class CallSummary {
     public void T2_CheckTenantName(){
 
          Response resp = given().
-                header("appID", "abcd").
+                header("appID", "35f8dffb-650b-42c5-af27-76be5bc2053d").
                 when().
                 get(path);
 
@@ -51,7 +51,7 @@ public class CallSummary {
     public void T3_CheckFieldValues(){
 
         Response resp = given().
-                header("appID", "abcd").
+                header("appID", "35f8dffb-650b-42c5-af27-76be5bc2053d").
                 when().
                 get(path);
         resp.print();

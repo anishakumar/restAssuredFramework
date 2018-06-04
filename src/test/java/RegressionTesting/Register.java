@@ -61,9 +61,6 @@ public class Register {
         //System.out.println(appName);
         Assert.assertEquals(appName,"Automation"+randomId);
 
-
-
-
     }
 }
 
